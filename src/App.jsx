@@ -1,12 +1,12 @@
 import React from 'react';
-
-const LandingPageJasa = () => {
+import { createWhatsAppLink } from "./utils/whatsapp";
+const LandingPage = () => {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 relative">
 
       {/* --- TOMBOL WHATSAPP MELAYANG --- */}
       <a
-        href="https://wa.me/6281234567890"
+        href="https://wa.me/6281547193270"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-[9999] group flex items-center gap-3"
@@ -106,7 +106,27 @@ const LandingPageJasa = () => {
                   Free Domain & Hosting (1th)
                 </li>
               </ul>
-              <button className="w-full py-4 bg-white text-blue-600 group-hover:bg-blue-900 group-hover:text-white font-bold rounded-2xl transition">Pilih Paket</button>
+              <a
+                href={createWhatsAppLink("Web Development")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  flex items-center justify-center gap-2
+                  w-full py-4
+                  bg-white text-blue-600
+                  group-hover:bg-blue-900
+                  group-hover:text-white
+                  font-bold rounded-2xl
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  active:scale-95
+                  hover:shadow-lg
+                  cursor-pointer
+                "
+              >
+                Pilih Paket
+                <span>→</span>
+              </a>
             </div>
 
             {/* Paket 2: Digital Ads */}
@@ -133,7 +153,26 @@ const LandingPageJasa = () => {
                   Laporan Performa Bulanan
                 </li>
               </ul>
-              <button className="w-full py-4 bg-blue-600 text-white group-hover:bg-blue-900 font-bold rounded-2xl transition">Pilih Paket</button>
+              <a
+                href={createWhatsAppLink("Digital Ads")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  flex items-center justify-center gap-2
+                  w-full py-4
+                  bg-blue-600 text-white
+                  group-hover:bg-blue-900
+                  font-bold rounded-2xl
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  active:scale-95
+                  hover:shadow-lg
+                  cursor-pointer
+                "
+              >
+                Pilih Paket
+                <span>→</span>
+              </a>
             </div>
 
             {/* Paket 3: UI/UX Design */}
@@ -160,7 +199,27 @@ const LandingPageJasa = () => {
                   3x Iterasi/Revisi Desain
                 </li>
               </ul>
-              <button className="w-full py-4 bg-white text-blue-600 group-hover:bg-blue-900 group-hover:text-white font-bold rounded-2xl transition">Pilih Paket</button>
+              <a
+                href={createWhatsAppLink("UI/UX Design")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  flex items-center justify-center gap-2
+                  w-full py-4
+                  bg-white text-blue-600
+                  group-hover:bg-blue-900
+                  group-hover:text-white
+                  font-bold rounded-2xl
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  active:scale-95
+                  hover:shadow-lg
+                  cursor-pointer
+                "
+              >
+                Pilih Paket
+                <span>→</span>
+              </a>
             </div>
 
           </div>
@@ -169,10 +228,12 @@ const LandingPageJasa = () => {
 
       {/* --- FOOTER --- */}
       <footer className="py-12 bg-white border-t border-slate-200 text-center px-6">
-        <p className="text-slate-500 text-sm">© 2024 WebPro Digital Agency. Paket harga dapat berubah sesuai kompleksitas proyek.</p>
+        <p className="text-slate-500 text-sm">
+          © {new Date().getFullYear()} Genta Teknologi. Paket harga dapat berubah sesuai kompleksitas proyek.
+        </p>
       </footer>
     </div>
   );
 };
 
-export default LandingPageJasa;
+export default LandingPage;
