@@ -1,2 +1,1 @@
 # genta-teknologi
-# genta-teknologi
