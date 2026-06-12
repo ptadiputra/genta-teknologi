@@ -1,0 +1,2 @@
+# genta-teknologi
+# genta-teknologi
