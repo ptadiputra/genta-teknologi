@@ -85,9 +85,11 @@ const LandingPage = () => {
             <a href="#portfolio" className="hover:text-blue-600 transition">
               Portfolio
             </a>
-            <button className="bg-blue-600 text-white px-6 py-2.5 rounded-full hover:bg-blue-700 shadow-lg shadow-blue-200 transition">
-              Contact Us
-            </button>
+            <a href="#about" >
+              <button className="bg-blue-600 text-white px-6 py-2.5 rounded-full hover:bg-blue-700 shadow-lg shadow-blue-200 transition">
+                About Us
+              </button>
+            </a>
           </div>
 
         </div>
@@ -207,7 +209,7 @@ const LandingPage = () => {
               <h3 className="text-2xl font-bold text-blue-900 group-hover:text-white mb-2">Digital Ads</h3>
               <div className="mb-6">
                 <span className="text-sm group-hover:text-blue-100 text-slate-500">Mulai dari</span>
-                <p className="text-3xl font-black text-blue-600 group-hover:text-white leading-none mt-1">Rp 1.000.000<span className="text-xs font-normal">/bln</span></p>
+                <p className="text-3xl font-black text-blue-600 group-hover:text-white leading-none mt-1">Rp 250.000<span className="text-xs font-normal"></span></p>
               </div>
               <ul className="space-y-4 mb-8 text-slate-600 group-hover:text-blue-50 transition">
                 <li className="flex items-center gap-3 text-sm font-medium">
@@ -292,6 +294,45 @@ const LandingPage = () => {
               </a>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* --- ABOUT US SECTION --- */}
+      <section id="about" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+
+            {/* Kolom Kiri: Gambar (Tetap sama karena sudah keren) */}
+            <div className="relative group">
+              <div className="relative h-[350px] md:h-[500px] rounded-[3rem] overflow-hidden border-[12px] border-white shadow-2xl">
+                <img
+                  src="/genta-white.jpg"
+                  alt="Founder WebPro"
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
+                />
+              </div>
+            </div>
+
+            {/* Kolom Kanan: Info Profil (Diubah dari Contact menjadi About) */}
+            <div className="space-y-6 text-center md:text-left">
+              <div>
+                <h2 className="text-blue-600 font-bold uppercase tracking-[0.2em] text-xs md:text-sm mb-4 italic">
+                  About Our Agency
+                </h2>
+
+                <h3 className="text-4xl sm:text-5xl md:text-7xl font-black text-slate-900 leading-tight md:leading-[0.9] italic uppercase tracking-tighter">
+                  We are
+                  <span className="block">
+                    Digital <span className="text-blue-600">Visionaries.</span>
+                  </span>
+                </h3>
+
+                <p className="mt-6 md:mt-8 text-slate-500 text-base md:text-lg leading-relaxed font-medium max-w-xl mx-auto md:mx-2 p-2">
+                  Kami percaya bahwa setiap bisnis memiliki potensi untuk berkembang lebih jauh melalui teknologi yang tepat. Dengan menggabungkan kreativitas, strategi, dan inovasi, kami menghadirkan solusi digital yang membantu bisnis tampil lebih profesional dan kompetitif.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
