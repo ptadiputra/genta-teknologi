@@ -1,8 +1,46 @@
 import React from 'react';
 import { createWhatsAppLink } from "./utils/whatsapp";
 const LandingPage = () => {
+  const portfolioTop = [
+    "https://images.unsplash.com/photo-1558655146-d09347e92766?w=500&q=80", // UI Design
+    "https://images.unsplash.com/photo-1547658719-da2b51169166?w=500&q=80", // Web Dev
+    "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=500&q=80", // Architecture
+    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80", // Dashboard
+    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80", // Analytics
+  ];
+
+  const portfolioBottom = [
+    "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=500&q=80", // Personal
+    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=500&q=80", // Agency
+    "https://images.unsplash.com/photo-1551033406-611cf9a28f67?w=500&q=80", // Code
+    "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=500&q=80", // Creative
+    "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&q=80", // Team
+  ];
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 relative">
+
+      {/* --- CSS UNTUK ANIMASI BERJALAN --- */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        @keyframes marquee-left {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        @keyframes marquee-right {
+          0% { transform: translateX(-50%); }
+          100% { transform: translateX(0); }
+        }
+        .animate-marquee-left {
+          animation: marquee-left 20s linear infinite;
+        }
+        .animate-marquee-right {
+          animation: marquee-right 20s linear infinite;
+        }
+        .animate-marquee-left:hover,
+        .animate-marquee-right:hover {
+          animation-play-state: paused;
+        }
+      `}} />
 
       {/* --- TOMBOL WHATSAPP MELAYANG --- */}
       <a
@@ -66,9 +104,41 @@ const LandingPage = () => {
           <div className="hidden md:block bg-blue-600 rounded-[3rem] aspect-video relative shadow-2xl overflow-hidden">
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
             <div className="absolute inset-0 flex items-center justify-center">
-              <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+              <img src="/genta.jpg" alt="Portfolio" className="w-full h-full object-cover hover:scale-110 transition duration-500" />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* --- HERO & PORTFOLIO SLIDER --- */}
+      <section>
+        <div className="max-w-7xl mx-auto px-6 text-center mb-16">
+          <h2 className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4">Our Creative Showcase</h2>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 italic">We build digital experiences.</h1>
+          <p className="text-slate-600 max-w-2xl mx-auto">Lihat beberapa hasil kerja kami yang membantu klien mencapai kesuksesan digital.</p>
+        </div>
+
+        {/* MARQUEE CONTAINER */}
+        <div className="space-y-10 py-10 bg-blue-900/5 overflow-hidden">
+
+          {/* BARIS ATAS - JALAN KE KIRI */}
+          <div className="flex w-[200%] gap-6 animate-marquee-left">
+            {[...portfolioTop, ...portfolioTop].map((img, index) => (
+              <div key={index} className="w-[350px] md:w-[450px] h-[250px] flex-shrink-0 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+                <img src={img} alt="Portfolio" className="w-full h-full object-cover hover:scale-110 transition duration-500" />
+              </div>
+            ))}
+          </div>
+
+          {/* BARIS BAWAH - JALAN KE KANAN */}
+          <div className="flex w-[200%] gap-6 animate-marquee-right">
+            {[...portfolioBottom, ...portfolioBottom].map((img, index) => (
+              <div key={index} className="w-[350px] md:w-[450px] h-[250px] flex-shrink-0 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+                <img src={img} alt="Portfolio" className="w-full h-full object-cover hover:scale-110 transition duration-500" />
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
 
@@ -90,7 +160,7 @@ const LandingPage = () => {
               <h3 className="text-2xl font-bold text-blue-900 group-hover:text-white mb-2">Web Development</h3>
               <div className="mb-6">
                 <span className="text-sm group-hover:text-blue-100 text-slate-500">Mulai dari</span>
-                <p className="text-3xl font-black text-blue-600 group-hover:text-white leading-none mt-1">Rp 1.000.000</p>
+                <p className="text-3xl font-black text-blue-600 group-hover:text-white leading-none mt-1">Rp 750.000</p>
               </div>
               <ul className="space-y-4 mb-8 text-slate-600 group-hover:text-blue-50 transition">
                 <li className="flex items-center gap-3 text-sm font-medium">
@@ -183,7 +253,7 @@ const LandingPage = () => {
               <h3 className="text-2xl font-bold text-blue-900 group-hover:text-white mb-2">UI/UX Design</h3>
               <div className="mb-6">
                 <span className="text-sm group-hover:text-blue-100 text-slate-500">Mulai dari</span>
-                <p className="text-3xl font-black text-blue-600 group-hover:text-white leading-none mt-1">Rp 1.500.000</p>
+                <p className="text-3xl font-black text-blue-600 group-hover:text-white leading-none mt-1">Rp 500.000</p>
               </div>
               <ul className="space-y-4 mb-8 text-slate-600 group-hover:text-blue-50 transition">
                 <li className="flex items-center gap-3 text-sm font-medium">
