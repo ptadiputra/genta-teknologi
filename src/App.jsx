@@ -1,6 +1,20 @@
-import React from 'react';
+import React, { useState, useMemo } from "react";
 import { createWhatsAppLink } from "./utils/whatsapp";
 import { FiChevronRight, FiInfo } from "react-icons/fi";
+import {
+  Briefcase,
+  Layers,
+  Sparkles,
+  Smartphone,
+  Code,
+  Palette,
+  X,
+  RefreshCw,
+  ExternalLink,
+  ChevronRight,
+  Info
+} from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
 const LandingPage = () => {
   const portfolioTop = [
     "https://images.unsplash.com/photo-1558655146-d09347e92766?w=500&q=80", // UI Design
@@ -20,7 +34,7 @@ const LandingPage = () => {
 
   const projects = [
     {
-      id: 1,
+      id: "1",
       title: "Sikejar Bali",
       subtitle: "Learning Management System",
       category: "web",
@@ -31,7 +45,7 @@ const LandingPage = () => {
       url: "https://sikejarbali.com",
     },
     {
-      id: 2,
+      id: "2",
       title: "Genta Teknologi",
       subtitle: "Company Profile ",
       category: "web",
@@ -43,22 +57,55 @@ const LandingPage = () => {
     },
   ];
 
-    // Set up categories list
-  // const categories = [
-  //   { id: "all", name: "Semua Project", icon: Layers },
-  //   { id: "web", name: "Web App", icon: Code },
-  //   { id: "mobile", name: "Mobile App", icon: Smartphone },
-  //   { id: "branding", name: "Branding", icon: Palette },
-  // ];
+  // Set up categories list
+  const categories = [
+    { id: "all", name: "Semua Project", icon: Layers },
+    { id: "web", name: "Web App", icon: Code },
+    { id: "ui/ux", name: "UI/UX Design", icon: Palette },
+  ];
 
-  // // Process visible projects based on category filters and manual hiddens
-  // const visibleProjects = useMemo(() => {
-  //   return projects.filter((project) => {
-  //     const isNotHidden = !hiddenIds.has(project.id);
-  //     const matchesCategory = activeCategory === "all" || project.category === activeCategory;
-  //     return isNotHidden && matchesCategory;
-  //   });
-  // }, [activeCategory, hiddenIds]);
+  const [activeCategory, setActiveCategory] = useState("all");
+  const [hiddenIds, setHiddenIds] = useState(new Set());
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  // Process visible projects based on category filters and manual hiddens
+  const visibleProjects = useMemo(() => {
+    return projects.filter((project) => {
+      const isNotHidden = !hiddenIds.has(project.id);
+      const matchesCategory = activeCategory === "all" || project.category === activeCategory;
+      return isNotHidden && matchesCategory;
+    });
+  }, [activeCategory, hiddenIds]);
+
+  const handleToggleHide = (id, e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    const nextHidden = new Set(hiddenIds);
+    if (nextHidden.has(id)) {
+      nextHidden.delete(id);
+    } else {
+      nextHidden.add(id);
+    }
+    setHiddenIds(nextHidden);
+  };
+
+  const handleResetVisibility = () => {
+    setHiddenIds(new Set());
+  };
+
+  // Define dynamic grid wrapper class as requested
+  const getGridContainerClass = (count) => {
+    if (count === 1) {
+      // 1 project left -> Center completely by setting flex or column limitations
+      return "flex justify-center w-full max-w-md mx-auto";
+    }
+    if (count === 2) {
+      // 2 projects left -> Switch to dynamic 2-column layout centered properly in the container
+      return "grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto justify-center justify-items-center";
+    }
+    // 3 or more projects left -> Standard 3 column layout
+    return "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto justify-items-center justify-center";
+  };
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 relative">
 
@@ -341,73 +388,159 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section id="portfolio" className="py-8 bg-transparent px-6 transition duration-300">
+      {/* THE PORTFOLIO SECTION WITH FLEXIBLE GRID */}
+      <section id="portfolio" className="pt-8 bg-transparent px-6 transition duration-300">
         <div className="max-w-7xl mx-auto">
 
-          <div className="text-center mb-16">
-            <h2 className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-2">
+          {/* Section Headers as User's Template */}
+          <div className="text-center mb-12">
+            <h2 className="text-blue-600 font-extrabold uppercase tracking-widest text-xs mb-2">
               Our Projects
             </h2>
 
-            <h3 className="text-5xl font-black text-slate-900">
+            <h3 className="text-3xl md:text-5xl font-black text-slate-900 font-display tracking-tight leading-tight">
               Projects We've Built
             </h3>
 
-            <p className="text-slate-500 mt-4">
-              Beberapa project yang telah kami kerjakan untuk klien.
+            <p className="text-slate-500 mt-4 max-w-xl mx-auto text-sm md:text-base leading-relaxed">
+              Melihat lebih dekat beberapa inovasi digital yang telah kami realisasikan untuk klien-klien terbaik kami.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-            {projects.map((project) => (
-              <a
-                key={project.id}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-              >
-                {/* IMAGE */}
-                <div className="h-60 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                  />
-                </div>
+          <div className="pb-4 px-6 max-w-7xl mx-auto text-center">
+            <div className="inline-flex flex-wrap gap-1 bg-white p-1.5 rounded-2xl border border-slate-100 shadow-sm">
+              {categories.map((cat) => {
+                const IconComponent = cat.icon;
+                const isActive = activeCategory === cat.id;
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => {
+                      setActiveCategory(cat.id);
+                    }}
+                    className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 ${isActive
+                        ? "bg-blue-600 text-white shadow-lg shadow-blue-500/15 scale-105"
+                        : "text-slate-500 hover:text-slate-900 hover:bg-slate-50"
+                      }`}
+                  >
+                    <IconComponent className="w-3.5 h-3.5" />
+                    <span>{cat.name}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
 
-                {/* CONTENT */}
-                <div className="p-6">
-                  <span className="inline-block px-3 py-1 mb-3 text-xs font-semibold tracking-wider uppercase rounded-full bg-slate-100 text-slate-600">
-                    {project.subtitle}
-                  </span>
-
-                  <h4 className="text-3xl font-extrabold text-slate-900 mb-4 leading-tight">
-                    {project.title}
-                  </h4>
-
-                  <p className="text-slate-500 mb-5">
-                    {project.description}
-                  </p>
-
-                  {/* TAGS */}
-                  <div className="flex flex-wrap gap-2 mb-5">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold"
+          {/* DYNAMIC LAYOUT CONTAINER */}
+          <div className="relative min-h-[400px]">
+            <AnimatePresence mode="popLayout" initial={false}>
+              {visibleProjects.length === 0 ? (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  className="flex flex-col items-center justify-center text-center p-12 bg-white border border-slate-100 rounded-[2rem] max-w-md mx-auto shadow-lg"
+                >
+                  <Briefcase className="w-12 h-12 text-slate-400 mb-4 stroke-[1.2]" />
+                  <h4 className="font-extrabold text-slate-900 text-lg mb-1">Tidak Ada Proyek Aktif</h4>
+                  <p className="text-slate-500 text-xs mb-4">Semua proyek dalam kategori ini sedang disembunyikan atau dikesampingkan.</p>
+                  <button
+                    onClick={handleResetVisibility}
+                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-xl px-4 py-2.5 text-xs font-bold transition duration-150 uppercase tracking-wider shadow-md"
+                  >
+                    Tampilkan Semua Proyek
+                  </button>
+                </motion.div>
+              ) : (
+                <motion.div
+                  layout
+                  className={getGridContainerClass(visibleProjects.length)}
+                >
+                  {visibleProjects.map((project) => (
+                    <motion.div
+                      key={project.id}
+                      layout
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.9 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 24
+                      }}
+                      className="group relative w-full h-full flex"
+                    >
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setSelectedProject(project);
+                        }}
+                        className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 w-full"
                       >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                        {/* IMAGE */}
+                        <div className="h-60 overflow-hidden relative">
+                          <img
+                            src={project.image}
+                            alt={project.title}
+                            referrerPolicy="no-referrer"
+                            className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent pointer-events-none" />
 
-                  <div className="flex items-center text-blue-600 font-bold">
-                    Lihat Detail →
-                  </div>
-                </div>
-              </a>
-            ))}
+                          {/* FLOATING CATEGORY BADGE */}
+                          <span className="absolute bottom-4 left-4 inline-block px-4 py-1.5 text-[10px] font-extrabold tracking-wider uppercase rounded-full bg-blue-600 text-white shadow-lg pointer-events-none">
+                            {project.category.toUpperCase()} APP
+                          </span>
+
+                          {/* FLOATING ACTION: TEMPORARY HIDE BUTTON */}
+                          <button
+                            onClick={(e) => handleToggleHide(project.id, e)}
+                            title="Sembunyikan proyek ini"
+                            className="absolute top-4 right-4 p-2 bg-white/90 hover:bg-rose-500 text-slate-500 hover:text-white rounded-full transition duration-150 shadow-md border border-slate-100 backdrop-blur-sm group-hover:opacity-100 opacity-80 z-10"
+                          >
+                            <X className="w-3.5 h-3.5" />
+                          </button>
+                        </div>
+
+                        {/* CONTENT */}
+                        <div className="p-6 flex flex-col flex-1">
+                          <span className="inline-block px-3 py-1 mb-3 text-xs font-semibold tracking-wider uppercase rounded-full bg-slate-100 text-slate-600 self-start">
+                            {project.subtitle}
+                          </span>
+
+                          <h4 className="text-3xl font-extrabold text-slate-900 mb-4 leading-tight font-display group-hover:text-blue-600 transition-colors duration-150">
+                            {project.title}
+                          </h4>
+
+                          <p className="text-slate-500 mb-5 text-sm leading-relaxed flex-1">
+                            {project.description}
+                          </p>
+
+                          {/* TAGS */}
+                          <div className="flex flex-wrap gap-2 mb-5">
+                            {project.tags.map((tag) => (
+                              <span
+                                key={tag}
+                                className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+
+                          <div className="flex items-center text-blue-600 font-bold gap-2">
+                            Lihat Detail Proyek <span className="text-xl group-hover:translate-x-1.5 transition-transform duration-200">→</span>
+                          </div>
+                        </div>
+                      </a>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </section>
