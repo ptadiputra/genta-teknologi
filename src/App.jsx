@@ -1,5 +1,6 @@
 import React from 'react';
 import { createWhatsAppLink } from "./utils/whatsapp";
+import { FiChevronRight, FiInfo } from "react-icons/fi";
 const LandingPage = () => {
   const portfolioTop = [
     "https://images.unsplash.com/photo-1558655146-d09347e92766?w=500&q=80", // UI Design
@@ -16,6 +17,48 @@ const LandingPage = () => {
     "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=500&q=80", // Creative
     "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&q=80", // Team
   ];
+
+  const projects = [
+    {
+      id: 1,
+      title: "Sikejar Bali",
+      subtitle: "Learning Management System",
+      category: "web",
+      description:
+        "Sistem manajemen pembelajaran berbasis web dengan fitur kursus, ujian, dan pelacakan kemajuan.",
+      image: "/projects/sikejarbali.png",
+      tags: ["PHP", "MySQL", "Javascript", "Bootstrap"],
+      url: "https://sikejarbali.com",
+    },
+    {
+      id: 2,
+      title: "Genta Teknologi",
+      subtitle: "Company Profile ",
+      category: "web",
+      description:
+        "Website profil perusahaan yang menampilkan layanan, portofolio, dan informasi kontak.",
+      image: "/projects/gentateknologi.png",
+      tags: ["react", "tailwindcss", "netlify"],
+      url: "https://gentateknologi.netlify.app/",
+    },
+  ];
+
+    // Set up categories list
+  // const categories = [
+  //   { id: "all", name: "Semua Project", icon: Layers },
+  //   { id: "web", name: "Web App", icon: Code },
+  //   { id: "mobile", name: "Mobile App", icon: Smartphone },
+  //   { id: "branding", name: "Branding", icon: Palette },
+  // ];
+
+  // // Process visible projects based on category filters and manual hiddens
+  // const visibleProjects = useMemo(() => {
+  //   return projects.filter((project) => {
+  //     const isNotHidden = !hiddenIds.has(project.id);
+  //     const matchesCategory = activeCategory === "all" || project.category === activeCategory;
+  //     return isNotHidden && matchesCategory;
+  //   });
+  // }, [activeCategory, hiddenIds]);
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 relative">
 
@@ -294,6 +337,77 @@ const LandingPage = () => {
               </a>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" className="py-8 bg-transparent px-6 transition duration-300">
+        <div className="max-w-7xl mx-auto">
+
+          <div className="text-center mb-16">
+            <h2 className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-2">
+              Our Projects
+            </h2>
+
+            <h3 className="text-5xl font-black text-slate-900">
+              Projects We've Built
+            </h3>
+
+            <p className="text-slate-500 mt-4">
+              Beberapa project yang telah kami kerjakan untuk klien.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+            {projects.map((project) => (
+              <a
+                key={project.id}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              >
+                {/* IMAGE */}
+                <div className="h-60 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                  />
+                </div>
+
+                {/* CONTENT */}
+                <div className="p-6">
+                  <span className="inline-block px-3 py-1 mb-3 text-xs font-semibold tracking-wider uppercase rounded-full bg-slate-100 text-slate-600">
+                    {project.subtitle}
+                  </span>
+
+                  <h4 className="text-3xl font-extrabold text-slate-900 mb-4 leading-tight">
+                    {project.title}
+                  </h4>
+
+                  <p className="text-slate-500 mb-5">
+                    {project.description}
+                  </p>
+
+                  {/* TAGS */}
+                  <div className="flex flex-wrap gap-2 mb-5">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center text-blue-600 font-bold">
+                    Lihat Detail →
+                  </div>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
