@@ -6,6 +6,7 @@ import {
   Code,
   Palette,
   X,
+  ExternalLink
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 const LandingPage = () => {
@@ -537,6 +538,92 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+
+      {/* 4. DETAILS POPUP MODAL */}
+      <AnimatePresence>
+        {selectedProject && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            {/* Modal backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedProject(null)}
+              className="absolute inset-0 bg-slate-900/60 backdrop-blur-md"
+            />
+
+            {/* Modal body */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 15 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 15 }}
+              className="relative w-full max-w-2xl bg-white border border-slate-100 rounded-[2rem] overflow-hidden shadow-2xl z-10 max-h-[90vh] flex flex-col text-slate-800"
+            >
+              <button
+                onClick={() => setSelectedProject(null)}
+                className="absolute top-4 right-4 p-2.5 bg-white/90 hover:bg-rose-500 text-slate-500 hover:text-white rounded-full transition duration-150 z-20 shadow-md border border-slate-100"
+              >
+                <X className="w-4 h-4" />
+              </button>
+
+              <div className="overflow-y-auto">
+                {/* Hero image in modal */}
+                <div className="h-64 sm:h-80 relative bg-slate-100">
+                  <img
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-955 via-transparent to-transparent opacity-80" />
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <span className="inline-block px-3.5 py-1.5 mb-2.5 text-[10px] font-extrabold tracking-widest uppercase rounded-full bg-blue-600 text-white shadow-md">
+                      {selectedProject.category.toUpperCase()}
+                    </span>
+                    <h3 className="text-3xl font-black text-white font-display">
+                      {selectedProject.title}
+                    </h3>
+                  </div>
+                </div>
+
+                {/* Content body inside modal */}
+                <div className="p-6 sm:p-8">
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {selectedProject.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 bg-blue-50 text-blue-600 border border-blue-50/20 rounded-md text-xs font-bold uppercase"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                    {selectedProject.description} Kami mengimplementasikan solusi frontend modern berkinerja tinggi serta mengoptimalkan desain visual untuk meyakinkan audiens target klien sehingga meningkatkan branding bernilai tinggi menggunakan Geometric Balance layout.
+                  </p>
+
+                  <div className="p-4 bg-slate-50 border border-slate-100 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div className="text-center sm:text-left">
+                      <span className="block text-slate-400 text-[10px] uppercase font-black tracking-wider">Demo Proyek</span>
+                      <span className="text-slate-700 text-xs sm:text-sm font-bold font-mono">{selectedProject.url}</span>
+                    </div>
+                    <a
+                      href={selectedProject.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl transition duration-150 shadow-md uppercase tracking-wide font-sans"
+                    >
+                      <span>Buka Tautan Luar</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
 
       {/* --- ABOUT US SECTION --- */}
       <section id="about" className="py-24 bg-white">
