@@ -1,18 +1,11 @@
 import React, { useState, useMemo } from "react";
 import { createWhatsAppLink } from "./utils/whatsapp";
-import { FiChevronRight, FiInfo } from "react-icons/fi";
 import {
   Briefcase,
   Layers,
-  Sparkles,
-  Smartphone,
   Code,
   Palette,
   X,
-  RefreshCw,
-  ExternalLink,
-  ChevronRight,
-  Info
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 const LandingPage = () => {
@@ -389,7 +382,7 @@ const LandingPage = () => {
       </section>
 
       {/* THE PORTFOLIO SECTION WITH FLEXIBLE GRID */}
-      <section id="portfolio" className="pt-8 bg-transparent px-6 transition duration-300">
+      <section id="portfolio" className="py-8 bg-transparent px-6 transition duration-300">
         <div className="max-w-7xl mx-auto">
 
           {/* Section Headers as User's Template */}
@@ -419,8 +412,8 @@ const LandingPage = () => {
                       setActiveCategory(cat.id);
                     }}
                     className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 ${isActive
-                        ? "bg-blue-600 text-white shadow-lg shadow-blue-500/15 scale-105"
-                        : "text-slate-500 hover:text-slate-900 hover:bg-slate-50"
+                      ? "bg-blue-600 text-white shadow-lg shadow-blue-500/15 scale-105"
+                      : "text-slate-500 hover:text-slate-900 hover:bg-slate-50"
                       }`}
                   >
                     <IconComponent className="w-3.5 h-3.5" />
