@@ -45,6 +45,7 @@ export const projects = [
         description:
             "Desain UI/UX aplikasi spa dengan fokus pada kemudahan reservasi, navigasi intuitif, dan pengalaman pengguna yang nyaman.",
         image: "/ui/1.webp",
+        // images: ["/ui/1.webp", "/ui/1-2.webp", "/ui/1-3.webp"],
         tags: ["Figma", "Prototype", "User Flow", "Design System"],
     },
     {
@@ -67,10 +68,22 @@ export const projects = [
         image: "/ui/3.webp",
         tags: ["Figma", "Prototype", "User Flow", "Design System"],
     },
+    {
+        id: "6",
+        title: "Genta Teknologi",
+        subtitle: "logo Design",
+        category: "logo",
+        description:
+            "Merancang logo untuk Genta Teknologi yang mencerminkan identitas perusahaan, profesionalisme, dan inovasi dalam bidang teknologi.",
+        image: "/logo/genta/genta-white.webp",
+        images: ["/logo/genta/genta-white.webp", "/logo/genta/1.webp", "/logo/genta/2.webp", "/logo/genta/3.webp", "/logo/genta/4.webp", "/logo/genta/5.webp", "/logo/genta/6.webp"],
+        tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
+    },
 ];
 
 export const categories = [
     { id: "all", name: "Semua Project", iconName: "Layers" },
     { id: "web", name: "Web App", iconName: "Code" },
     { id: "ui/ux", name: "UI/UX Design", iconName: "Palette" },
+    { id: "logo", name: "Logo Design", iconName: "Image" },
 ];
