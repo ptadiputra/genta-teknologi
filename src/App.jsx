@@ -54,7 +54,7 @@ const LandingPage = () => {
           <div className="flex items-center">
             {/* Logo */}
             <img
-              src="/logo.png"
+              src="/logo.webp"
               alt="Genta Teknologi"
               className="w-12 h-12 object-contain"
             />
@@ -93,7 +93,7 @@ const LandingPage = () => {
           <div className="hidden md:block bg-blue-600 rounded-[3rem] aspect-video relative shadow-2xl overflow-hidden">
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
             <div className="absolute inset-0 flex items-center justify-center">
-              <img src="/genta.jpg" alt="Portfolio" className="w-full h-full object-cover hover:scale-110 transition duration-500" />
+              <img src="/genta.webp" alt="Portfolio" className="w-full h-full object-cover hover:scale-110 transition duration-500" />
             </div>
           </div>
         </div>
@@ -296,7 +296,7 @@ const LandingPage = () => {
             <div className="relative group">
               <div className="relative h-[350px] md:h-[500px] rounded-[3rem] overflow-hidden border-[12px] border-white shadow-2xl">
                 <img
-                  src="/genta-white.jpg"
+                  src="/genta-white.webp"
                   alt="Founder WebPro"
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
                 />
