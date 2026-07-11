@@ -79,6 +79,17 @@ export const projects = [
         images: ["/logo/genta/genta-white.webp", "/logo/genta/1.webp", "/logo/genta/2.webp", "/logo/genta/3.webp", "/logo/genta/4.webp", "/logo/genta/5.webp", "/logo/genta/6.webp"],
         tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
     },
+    {
+        id: "7",
+        title: "Dodol Ketan Luh Ninja",
+        subtitle: "logo Design",
+        category: "logo",
+        description:
+            "Merancang logo untuk Dodol Ketan Luh Ninja yang mencerminkan identitas usaha dalam bidang kuliner.",
+        image: "/logo/dodol/1.webp",
+        images: ["/logo/dodol/1.webp", "/logo/dodol/2.webp", "/logo/dodol/3.webp", "/logo/dodol/4.webp", "/logo/dodol/5.webp", "/logo/dodol/6.webp"],
+        tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
+    },
 ];
 
 export const categories = [
