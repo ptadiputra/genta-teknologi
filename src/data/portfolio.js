@@ -87,7 +87,7 @@ export const projects = [
         description:
             "Merancang logo untuk Dodol Ketan Luh Ninja yang mencerminkan identitas usaha dalam bidang kuliner.",
         image: "/logo/dodol/1.webp",
-        images: ["/logo/dodol/1.webp", "/logo/dodol/2.webp", "/logo/dodol/3.webp", "/logo/dodol/4.webp", "/logo/dodol/5.webp", "/logo/dodol/6.webp"],
+        images: ["/logo/dodol/1.webp", "/logo/dodol/2.webp", "/logo/dodol/3.webp", "/logo/dodol/4.webp", "/logo/dodol/5.webp"],
         tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
     },
 ];
