@@ -47,6 +47,22 @@ export const createWhatsAppLink = (packageName) => {
             • Estimasi waktu pengerjaan
 
             Terima kasih.`,
+        
+        // Logo Design
+        "Logo Design": `Halo Genta Teknologi 👋
+
+            Saya tertarik dengan paket *Logo Design*.
+
+            Saya ingin mendiskusikan kebutuhan desain logo yang modern, profesional, dan mudah digunakan.
+
+            Mohon informasi mengenai:
+
+            • Proses desain yang dilakukan
+            • Jumlah revisi yang tersedia
+            • File yang akan diterima
+            • Estimasi waktu pengerjaan
+
+            Terima kasih.`,
     };
 
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
