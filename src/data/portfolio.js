@@ -90,6 +90,127 @@ export const projects = [
         images: ["/logo/dodol/1.webp", "/logo/dodol/2.webp", "/logo/dodol/3.webp", "/logo/dodol/4.webp", "/logo/dodol/5.webp"],
         tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
     },
+    {
+        id: "8",
+        title: "Kitchen Balifornia",
+        subtitle: "logo Design",
+        category: "logo",
+        description:
+            "Merancang logo untuk Kitchen Balifornia yang mencerminkan identitas usaha dalam bidang kuliner.",
+        image: "/logo/kitchen/1.webp",
+        images: ["/logo/kitchen/1.webp", "/logo/kitchen/2.webp"],
+        tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
+    },
+    {
+        id: "9",
+        title: "Nailoncall",
+        subtitle: "logo Design",
+        category: "logo",
+        description:
+            "Merancang logo untuk Nailoncall yang mencerminkan identitas usaha dalam Nail Art.",
+        image: "/logo/nailoncall/1.webp",
+        images: ["/logo/nailoncall/1.webp", "/logo/nailoncall/2.webp", "/logo/nailoncall/3.webp", "/logo/nailoncall/4.webp", "/logo/nailoncall/5.webp"],
+        tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
+    },
+    {
+        id: "10",
+        title: "Snap Parking",
+        subtitle: "logo Design",
+        category: "logo",
+        description:
+            "Merancang logo untuk Snap Parking yang mencerminkan identitas usaha dalam bidang parkir.",
+        image: "/logo/snap/1.webp",
+        images: ["/logo/snap/1.webp", "/logo/snap/2.webp", "/logo/snap/3.webp", "/logo/snap/4.webp", "/logo/snap/5.webp", "/logo/snap/6.webp", "/logo/snap/7.webp"],
+        tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
+    },
+    {
+        id: "11",
+        title: "Zauber Von Bali",
+        subtitle: "logo Design",
+        category: "logo",
+        description:
+            "Merancang logo untuk Zauber Von Baliyang mencerminkan identitas usaha dalam bidang Fashion.",
+        image: "/logo/zauber/1.webp",
+        images: ["/logo/zauber/1.webp", "/logo/zauber/2.webp", "/logo/zauber/3.webp", "/logo/zauber/4.webp", "/logo/zauber/5.webp", "/logo/zauber/6.webp", "/logo/zauber/7.webp", "/logo/zauber/8.webp", "/logo/zauber/9.webp", "/logo/zauber/10.webp"],
+        tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
+    },
+    {
+        id: "12",
+        title: "Avikha",
+        subtitle: "logo Design",
+        category: "logo",
+        description:
+            "Merancang logo untuk Avikha yang mencerminkan identitas usaha dalam bidang Makanan.",
+        image: "/logo/avikha/1.webp",
+        images: ["/logo/avikha/1.webp", "/logo/avikha/2.webp"],
+        tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
+    },
+    {
+        id: "13",
+        title: "Tenguti Jewellery",
+        subtitle: "logo Design",
+        category: "logo",
+        description:
+            "Merancang logo untuk Tenguti Jewellery yang mencerminkan identitas usaha dalam bidang Perhiasan.",
+        image: "/logo/tenguti/1.webp",
+        images: ["/logo/tenguti/1.webp", "/logo/tenguti/2.webp", "/logo/tenguti/3.webp", "/logo/tenguti/4.webp"],
+        tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
+    },
+    {
+        id: "14",
+        title: "Suksema Angkringan",
+        subtitle: "logo Design",
+        category: "logo",
+        description:
+            "Merancang logo untuk Suksema Angkringan yang mencerminkan identitas usaha dalam bidang Makanan.",
+        image: "/logo/suksema/1.webp",
+        images: ["/logo/suksema/1.webp", "/logo/suksema/2.webp"],
+        tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
+    },
+    {
+        id: "15",
+        title: "Jojo Service",
+        subtitle: "logo Design",
+        category: "logo",
+        description:
+            "Merancang logo untuk Jojo Service yang mencerminkan identitas usaha dalam bidang Jasa.",
+        image: "/logo/jojo/1.webp",
+        images: ["/logo/jojo/1.webp", "/logo/jojo/2.webp", "/logo/jojo/3.webp"],
+        tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
+    },
+    {
+        id: "16",
+        title: "Atap Biru",
+        subtitle: "logo Design",
+        category: "logo",
+        description:
+            "Merancang logo untuk Atap Biru  yang mencerminkan identitas usaha dalam bidang Villa.",
+        image: "/logo/atap/1.webp",
+        images: ["/logo/atap/1.webp", "/logo/atap/2.webp"],
+        tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
+    },
+    {
+        id: "17",
+        title: "Ajaib Grafis",
+        subtitle: "logo Design",
+        category: "logo",
+        description:
+            "Merancang logo untuk Ajaib Grafis yang mencerminkan identitas usaha dalam bidang Desain.",
+        image: "/logo/ajaib/1.webp",
+        images: ["/logo/ajaib/1.webp", "/logo/ajaib/2.webp"],
+        tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
+    },
+    {
+        id: "18",
+        title: "Dssieng",
+        subtitle: "logo Design",
+        category: "logo",
+        description:
+            "Merancang logo untuk Dssieng yang mencerminkan identitas usaha dalam bidang Desain.",
+        image: "/logo/dssieng/1.webp",
+        images: ["/logo/dssieng/1.webp", "/logo/dssieng/2.webp", "/logo/dssieng/3.webp", "/logo/dssieng/4.webp", "/logo/dssieng/5.webp", "/logo/dssieng/6.webp"],
+        tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
+    },
 ];
 
 export const categories = [

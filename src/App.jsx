@@ -139,7 +139,7 @@ const LandingPage = () => {
             <p className="text-4xl font-extrabold text-slate-900">Paket Layanan Terbaik</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
 
             {/* Paket 1: Web Dev */}
             <div className="group p-8 rounded-[2.5rem] bg-blue-50 border border-blue-100 hover:bg-blue-600 transition-all duration-500 shadow-sm hover:shadow-2xl hover:shadow-blue-300">
@@ -281,6 +281,51 @@ const LandingPage = () => {
               </a>
             </div>
 
+            {/* Paket 4: Logo */}
+            <div className="group p-8 rounded-[2.5rem] bg-white border border-slate-200 hover:bg-blue-600 transition-all duration-500 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-blue-300">
+              <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white group-hover:rotate-6 transition">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2"><path d="M20 6L9 17l-5-5" /></svg>
+              </div>
+              <h3 className="text-2xl font-bold text-blue-900 group-hover:text-white mb-2">Logo Design</h3>
+              <div className="mb-6">
+                <span className="text-sm group-hover:text-blue-100 text-slate-500">Mulai dari</span>
+                <p className="text-3xl font-black text-blue-600 group-hover:text-white leading-none mt-1">Rp 250.000</p>
+              </div>
+              <ul className="space-y-4 mb-8 text-slate-600 group-hover:text-blue-50 transition">
+                <li className="flex items-center gap-3 text-sm font-medium">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="text-blue-600 group-hover:text-white"><path d="M20 6L9 17l-5-5" /></svg>
+                  Unique & Professional Logo
+                </li>
+                <li className="flex items-center gap-3 text-sm font-medium">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="text-blue-600 group-hover:text-white"><path d="M20 6L9 17l-5-5" /></svg>
+                  3 Initial Design Concepts
+                </li>
+                <li className="flex items-center gap-3 text-sm font-medium">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="text-blue-600 group-hover:text-white"><path d="M20 6L9 17l-5-5" /></svg>
+                  Source File Included (AI, SVG, PNG)
+                </li>
+              </ul>
+              <a
+                href={createWhatsAppLink("Logo Design")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  flex items-center justify-center gap-2
+                  w-full py-4
+                  bg-blue-600 text-white
+                  group-hover:bg-blue-900
+                  font-bold rounded-2xl
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  active:scale-95
+                  hover:shadow-lg
+                  cursor-pointer
+                "
+              >
+                Pilih Paket
+                <span>→</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
