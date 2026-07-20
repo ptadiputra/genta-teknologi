@@ -114,17 +114,6 @@ export const projects = [
     },
     {
         id: "10",
-        title: "Snap Parking",
-        subtitle: "logo Design",
-        category: "logo",
-        description:
-            "Merancang logo untuk Snap Parking yang mencerminkan identitas usaha dalam bidang parkir.",
-        image: "/logo/snap/1.webp",
-        images: ["/logo/snap/1.webp", "/logo/snap/2.webp", "/logo/snap/3.webp", "/logo/snap/4.webp", "/logo/snap/5.webp", "/logo/snap/6.webp", "/logo/snap/7.webp"],
-        tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
-    },
-    {
-        id: "11",
         title: "Zauber Von Bali",
         subtitle: "logo Design",
         category: "logo",
@@ -135,7 +124,7 @@ export const projects = [
         tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
     },
     {
-        id: "12",
+        id: "11",
         title: "Avikha",
         subtitle: "logo Design",
         category: "logo",
@@ -146,7 +135,7 @@ export const projects = [
         tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
     },
     {
-        id: "13",
+        id: "12",
         title: "Tenguti Jewellery",
         subtitle: "logo Design",
         category: "logo",
@@ -157,7 +146,7 @@ export const projects = [
         tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
     },
     {
-        id: "14",
+        id: "13",
         title: "Suksema Angkringan",
         subtitle: "logo Design",
         category: "logo",
@@ -168,7 +157,7 @@ export const projects = [
         tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
     },
     {
-        id: "15",
+        id: "14",
         title: "Jojo Service",
         subtitle: "logo Design",
         category: "logo",
@@ -179,7 +168,7 @@ export const projects = [
         tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
     },
     {
-        id: "16",
+        id: "15",
         title: "Atap Biru",
         subtitle: "logo Design",
         category: "logo",
@@ -190,7 +179,7 @@ export const projects = [
         tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
     },
     {
-        id: "17",
+        id: "16",
         title: "Ajaib Grafis",
         subtitle: "logo Design",
         category: "logo",
@@ -201,7 +190,7 @@ export const projects = [
         tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
     },
     {
-        id: "18",
+        id: "17",
         title: "Dssieng",
         subtitle: "logo Design",
         category: "logo",
@@ -212,7 +201,7 @@ export const projects = [
         tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
     },
     {
-        id: "19",
+        id: "18",
         title: "Nak Amed",
         subtitle: "logo Design",
         category: "logo",
