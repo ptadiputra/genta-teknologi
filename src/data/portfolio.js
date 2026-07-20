@@ -211,6 +211,18 @@ export const projects = [
         images: ["/logo/dssieng/1.webp", "/logo/dssieng/2.webp", "/logo/dssieng/3.webp", "/logo/dssieng/4.webp", "/logo/dssieng/5.webp", "/logo/dssieng/6.webp"],
         tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
     },
+    {
+        id: "19",
+        title: "Nak Amed",
+        subtitle: "logo Design",
+        category: "logo",
+        description:
+            "Merancang logo untuk Nak Amed yang mencerminkan identitas usaha dalam bidang Desain.",
+        image: "/logo/amed/1.webp",
+        images: ["/logo/amed/1.webp", "/logo/amed/2.webp", "/logo/amed/3.webp", "/logo/amed/4.webp", "/logo/amed/5.webp", "/logo/amed/6.webp", "/logo/amed/7.webp", "/logo/amed/8.webp", "/logo/amed/9.webp"],
+        tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
+    },
+
 ];
 
 export const categories = [
