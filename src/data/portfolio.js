@@ -211,6 +211,17 @@ export const projects = [
         images: ["/logo/amed/1.webp", "/logo/amed/2.webp", "/logo/amed/3.webp", "/logo/amed/4.webp", "/logo/amed/5.webp", "/logo/amed/6.webp", "/logo/amed/7.webp", "/logo/amed/8.webp", "/logo/amed/9.webp"],
         tags: ["Figma", "Prototype", "Logo Design", "Brand Identity"],
     },
+    {
+        id: "19",
+        title: "Undanganku",
+        subtitle: "Undangan Pernikahan Online",
+        category: "web",
+        description:
+            "Undangan pernikahan Online",
+        image: "/web/undanganku.webp",
+        tags: ["HTML", "Supabase", "Javascript", "Bootstrap"],
+        url: "https://darkgoldenrod-wasp-654030.hostingersite.com",
+    },
 
 ];
 
