@@ -214,15 +214,36 @@ export const projects = [
     {
         id: "19",
         title: "Undanganku",
-        subtitle: "Undangan Pernikahan Online",
+        subtitle: "Online Invitation",
         category: "web",
         description:
-            "Undangan pernikahan Online",
+            "Undangan Pernikahan Online",
         image: "/web/undanganku.webp",
         tags: ["HTML", "Supabase", "Javascript", "Bootstrap"],
         url: "https://darkgoldenrod-wasp-654030.hostingersite.com",
     },
-
+    {
+        id: "20",
+        title: "Info Hunian Bali",
+        subtitle: "Landing Page",
+        category: "web",
+        description:
+            "InfoHunian membantu mencari kos sesuai lokasi, budget, fasilitas, dan gaya hidup Anda. Cocok untuk pekerja, mahasiswa, digital nomad, dan pendatang baru di Bali.",
+        image: "/web/infohunian.webp",
+        tags: ["HTML", "Supabase", "Javascript", "Bootstrap"],
+        url: "https://rosybrown-gnu-733157.hostingersite.com",
+    },
+    {
+        id: "21",
+        title: "Manajemen Survey",
+        subtitle: "Survey Management System",
+        category: "web",
+        description:
+            "Platform manajemen survei yang memudahkan pembuatan, pengelolaan, pengumpulan respons, serta penyajian laporan hasil survei secara otomatis dan terstruktur",
+        image: "/web/survey.webp",
+        tags: ["Laravel", "Database", "Javascript", "Bootstrap"],
+        url: "https://rosybrown-gnu-733157.hostingersite.com",
+    },
 ];
 
 export const categories = [
