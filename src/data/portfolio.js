@@ -244,6 +244,50 @@ export const projects = [
         tags: ["Laravel", "Database", "Javascript", "Bootstrap"],
         url: "https://rosybrown-gnu-733157.hostingersite.com",
     },
+    {
+        id: "22",
+        title: "Elearning SMP Negeri 1 Penebel",
+        subtitle: "Elearning Management System",
+        category: "web",
+        description:
+            "Platform pembelajaran daring yang dirancang untuk mendukung proses belajar mengajar di SMP Negeri 1 Penebel. Siswa dan guru dapat mengakses materi, tugas, kuis, serta informasi akademik kapan saja dan di mana saja",
+        image: "/web/elearning1penebel.webp",
+        tags: ["Laravel", "Database", "Javascript", "Bootstrap"],
+        url: "https://e-learning.smpn1penebel.com",
+    },
+    {
+        id: "23",
+        title: "Perpustakaan SMP Negeri 1 Penebel",
+        subtitle: "Libary Management System",
+        category: "web",
+        description:
+            "Sistem perpustakaan berbasis web yang dirancang untuk mempermudah pengelolaan data buku, anggota, peminjaman, pengembalian, serta pembuatan laporan secara terintegrasi",
+        image: "/web/perpustakaan1penebel.webp",
+        tags: ["Laravel", "Database", "Javascript", "Bootstrap"],
+        url: "https://pustakaspensapen.com",
+    },
+    {
+        id: "24",
+        title: "Sistem Informasi Geografis Pariwisata Manggarai Timur",
+        subtitle: "Geographic Information System",
+        category: "web",
+        description:
+            "Sistem Informasi Geografis (SIG) berbasis web yang menyediakan informasi destinasi wisata di Kabupaten Manggarai Timur, lengkap dengan lokasi, deskripsi, fasilitas, dan rute untuk memudahkan wisatawan dalam merencanakan perjalanan",
+        image: "/web/gis.webp",
+        tags: ["Laravel", "Database", "Javascript", "Bootstrap"],
+        url: "https://wisatamanggaraitimur.online",
+    },
+    {
+        id: "25",
+        title: "Perpustakaan SMP Negeri 3 Tabanan",
+        subtitle: "Libary Management System",
+        category: "web",
+        description:
+            "Sistem perpustakaan berbasis web yang dirancang untuk mempermudah pengelolaan data buku, anggota, peminjaman, pengembalian, serta pembuatan laporan secara terintegrasi",
+        image: "/web/elearning3tabanan.webp",
+        tags: ["Laravel", "Database", "Javascript", "Bootstrap"],
+        url: "https://perpus.smpn3tabanan.com",
+    },
 ];
 
 export const categories = [
