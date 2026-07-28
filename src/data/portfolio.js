@@ -242,7 +242,7 @@ export const projects = [
             "Platform manajemen survei yang memudahkan pembuatan, pengelolaan, pengumpulan respons, serta penyajian laporan hasil survei secara otomatis dan terstruktur",
         image: "/web/survey.webp",
         tags: ["Laravel", "Database", "Javascript", "Bootstrap"],
-        url: "https://rosybrown-gnu-733157.hostingersite.com",
+        url: "https://plum-boar-585169.hostingersite.com",
     },
     {
         id: "22",
@@ -258,7 +258,7 @@ export const projects = [
     {
         id: "23",
         title: "Perpustakaan SMP Negeri 1 Penebel",
-        subtitle: "Libary Management System",
+        subtitle: "Library Management System",
         category: "web",
         description:
             "Sistem perpustakaan berbasis web yang dirancang untuk mempermudah pengelolaan data buku, anggota, peminjaman, pengembalian, serta pembuatan laporan secara terintegrasi",
