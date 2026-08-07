@@ -280,13 +280,24 @@ export const projects = [
     {
         id: "25",
         title: "Perpustakaan SMP Negeri 3 Tabanan",
-        subtitle: "Libary Management System",
+        subtitle: "Library Management System",
         category: "web",
         description:
             "Sistem perpustakaan berbasis web yang dirancang untuk mempermudah pengelolaan data buku, anggota, peminjaman, pengembalian, serta pembuatan laporan secara terintegrasi",
         image: "/web/elearning3tabanan.webp",
         tags: ["Laravel", "Database", "Javascript", "Bootstrap"],
         url: "https://perpus.smpn3tabanan.com",
+    },
+    {
+        id: "26",
+        title: "Portofolio Website",
+        subtitle: "Personal Portfolio Website",
+        category: "web",
+        description:
+            "Website portofolio pribadi yang menampilkan proyek-proyek yang telah dikerjakan dan keterampilan yang dimiliki",
+        image: "/web/portfolio.webp",
+        tags: ["css", "Javascript", "Bootstrap"],
+        url: "https://ptadiputra.netlify.app",
     },
 ];
 
