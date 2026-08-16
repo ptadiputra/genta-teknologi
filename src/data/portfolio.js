@@ -220,7 +220,7 @@ export const projects = [
             "Undangan Pernikahan Online",
         image: "/web/undanganku.webp",
         tags: ["HTML", "Supabase", "Javascript", "Bootstrap"],
-        url: "https://darkgoldenrod-wasp-654030.hostingersite.com",
+        url: "https://iniundanganmu.netlify.app",
     },
     {
         id: "20",
@@ -231,7 +231,7 @@ export const projects = [
             "InfoHunian membantu mencari kos sesuai lokasi, budget, fasilitas, dan gaya hidup Anda. Cocok untuk pekerja, mahasiswa, digital nomad, dan pendatang baru di Bali.",
         image: "/web/infohunian.webp",
         tags: ["HTML", "Supabase", "Javascript", "Bootstrap"],
-        url: "https://rosybrown-gnu-733157.hostingersite.com",
+        url: "https://infohunian.netlify.app",
     },
     {
         id: "21",
