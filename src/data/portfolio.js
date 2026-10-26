@@ -299,6 +299,39 @@ export const projects = [
         tags: ["css", "Javascript", "Bootstrap"],
         url: "https://ptadiputra.netlify.app",
     },
+    {
+        id: "27",
+        title: "Bali Spa",
+        subtitle: "Bali Spa Website",
+        category: "web",
+        description:
+            "Website untuk bisnis spa di Bali yang menampilkan layanan, paket, dan informasi kontak untuk memudahkan pelanggan dalam melakukan reservasi",
+        image: "/web/balispa.webp",
+        tags: ["tailwindcss", "typeScript", "react"],
+        url: "https://grey-lark-362662.hostingersite.com",
+    },
+    {
+        id: "28",
+        title: "Bali Serenity Spa",
+        subtitle: "Bali Serenity Spa Website",
+        category: "web",
+        description:
+            "Website untuk bisnis spa di Bali yang menampilkan layanan, paket, dan informasi kontak untuk memudahkan pelanggan dalam melakukan reservasi",
+        image: "/web/baliserenityspa.webp",
+        tags: ["tailwindcss", "typeScript", "react"],
+        url: "https://baliserenityspa.netlify.app",
+    },
+    {
+        id: "29",
+        title: "Sukha Spa",
+        subtitle: "Sukha Spa Website",
+        category: "web",
+        description:
+            "Website untuk bisnis spa di Bali yang menampilkan layanan, paket, dan informasi kontak untuk memudahkan pelanggan dalam melakukan reservasi",
+        image: "/web/sukhaspa.webp",
+        tags: ["tailwindcss", "typeScript", "react"],
+        url: "https://sukhaspa.netlify.app",
+    },
 ];
 
 export const categories = [
