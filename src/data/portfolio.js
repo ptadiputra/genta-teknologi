@@ -332,6 +332,28 @@ export const projects = [
         tags: ["tailwindcss", "typeScript", "react"],
         url: "https://sukhaspa.netlify.app",
     },
+    {
+        id: "30",
+        title: "Bali Guide",
+        subtitle: "Bali Guide Website",
+        category: "web",
+        description:
+            "Website untuk bisnis spa di Bali yang menampilkan layanan, paket, dan informasi kontak untuk memudahkan pelanggan dalam melakukan reservasi",
+        image: "/web/baliguide.webp",
+        tags: ["tailwindcss", "typeScript", "react"],
+        url: "https://lightsalmon-locust-461562.hostingersite.com/en",
+    },
+    {
+        id: "31",
+        title: "Bali Guide Luxury",
+        subtitle: "Bali Guide Luxury Website",
+        category: "web",
+        description:
+            "Website untuk bisnis spa di Bali yang menampilkan layanan, paket, dan informasi kontak untuk memudahkan pelanggan dalam melakukan reservasi",
+        image: "/web/baliguidedark.webp",
+        tags: ["tailwindcss", "typeScript", "react"],
+        url: "https://balitourguide.netlify.app",
+    },
 ];
 
 export const categories = [
