@@ -338,7 +338,7 @@ export const projects = [
         subtitle: "Bali Guide Website",
         category: "web",
         description:
-            "Website untuk bisnis spa di Bali yang menampilkan layanan, paket, dan informasi kontak untuk memudahkan pelanggan dalam melakukan reservasi",
+            "Website untuk bisnis tour guide di Bali yang menyediakan informasi lengkap mengenai layanan wisata, pilihan paket tour, destinasi, serta informasi kontak. Website ini dirancang untuk memudahkan wisatawan dalam memilih paket perjalanan dan melakukan reservasi dengan mudah.",
         image: "/web/baliguide.webp",
         tags: ["tailwindcss", "typeScript", "react"],
         url: "https://lightsalmon-locust-461562.hostingersite.com/en",
@@ -349,7 +349,7 @@ export const projects = [
         subtitle: "Bali Guide Luxury Website",
         category: "web",
         description:
-            "Website untuk bisnis spa di Bali yang menampilkan layanan, paket, dan informasi kontak untuk memudahkan pelanggan dalam melakukan reservasi",
+            "Website untuk bisnis tour guide di Bali yang menyediakan informasi lengkap mengenai layanan wisata, pilihan paket tour, destinasi, serta informasi kontak. Website ini dirancang untuk memudahkan wisatawan dalam memilih paket perjalanan dan melakukan reservasi dengan mudah.",
         image: "/web/baliguidedark.webp",
         tags: ["tailwindcss", "typeScript", "react"],
         url: "https://balitourguide.netlify.app",
