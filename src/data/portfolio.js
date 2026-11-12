@@ -354,6 +354,17 @@ export const projects = [
         tags: ["tailwindcss", "typeScript", "react"],
         url: "https://balitourguide.netlify.app",
     },
+    {
+        id: "32",
+        title: "Media Pembelajaran Interaktif Keterampilan Pemesanan Room Service",
+        subtitle: "Media pembelajaran interaktif berbasis web",
+        category: "web",
+        description:
+            "media pembelajaran interaktif berbasis web yang dirancang untuk membantu siswa memahami keterampilan pemesanan room service di industri perhotelan. Media ini menyediakan materi pembelajaran, simulasi interaktif, dan evaluasi untuk meningkatkan pemahaman siswa secara efektif.",
+        image: "/web/roomservice.webp",
+        tags: ["html", "css", "javascript", "bootstrap"],
+        url: "https://golden-speculoos-e11123.netlify.app",
+    },
 ];
 
 export const categories = [
